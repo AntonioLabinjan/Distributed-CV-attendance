@@ -4,12 +4,12 @@ import torch
 import requests
 import time
 
-# Load YOLO model
-model = torch.hub.load('ultralytics/yolov5', 'yolov5n')  # najmanji model
+model = torch.hub.load('ultralytics/yolov5', 'yolov5n') 
 model.classes = [0]  # samo osoba (COCO klasa 0)
 
 NODE_ID = "Node-1"
-SERVER_URL = "http://127.0.0.1:5000/report"
+#SERVER_URL = "http://127.0.0.1:5000/report"
+SERVER_URL = "https://central-server-app-1.onrender.com/report"
 
 cap = cv2.VideoCapture(0)
 
@@ -35,6 +35,6 @@ while True:
             print(f"[Greška] Nije moguće poslati serveru: {e}")
 
         
-        time.sleep(5)  # spriječi spamanje servera
+        time.sleep(5)  # da ne spammamo server
 
-    time.sleep(0.5)  # obrada svakih pola sekunde
+    time.sleep(0.5)  # obrada svakih po sekunde
