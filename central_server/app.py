@@ -1,3 +1,4 @@
+# OVU PALIMO SAMO NA 1 CENTRALNEMU
 # central_server/app.py
 from flask import Flask, request, jsonify, render_template_string, redirect
 from datetime import datetime
