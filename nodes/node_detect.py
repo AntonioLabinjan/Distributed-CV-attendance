@@ -1,3 +1,4 @@
+# OVU PALIMO NA VIŠE RAČUNALA
 # node/node_detect.py
 import cv2
 import torch
